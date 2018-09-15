@@ -1,5 +1,6 @@
 #include "Json.hpp"
 
+
 Json::Json(const std::string& s) {
 	int string_counter = 0;
 	std::string onekey;
