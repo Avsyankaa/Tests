@@ -1,0 +1,23 @@
+#include <iostream>
+#include <string>
+#include <vector>
+#include <any>
+#include <stdlib.h>
+#include <typeinfo>
+#include <stdexcept>
+class Json {
+public:
+	std::vector <std::string> keys;
+	std::vector <std::any> meanings;
+	std::vector <std::any> array;
+	class Error {};
+	Json(const std::string& s);
+	bool is_array() const;
+	bool is_object() const;
+	std::any& operator[](const std::string& key);
+	std::any& operator[](int index);
+	static Json parse(const std::string& s) {
+		Json json1(s);
+		return json1;
+	}
+};
