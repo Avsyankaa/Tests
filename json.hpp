@@ -17,7 +17,16 @@ public:
 	std::any& operator[](const std::string& key);
 	std::any& operator[](int index);
 	static Json parse(const std::string& s) {
-		Json json1(s);
+		std::string str;
+		int count = 0;
+		while (count != s.length()) {
+			if (s[count] != '\n') {
+				str += s[count];
+			}
+			count++;
+		}
+		std::cout << str << std::endl;
+		Json json1(str);
 		return json1;
 	}
 };
