@@ -4,12 +4,8 @@ include_directories(SYSTEM
     ./
 )
 add_library ( json STATIC 
-sources/json.cpp
+json.cpp
 )
-target_include_directories (json 
-PUBLIC 
-Json3/include
-) 
 
 # if(CMAKE_COMPILER_IS_GNUCXX)
 set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++17 -fsanitize=address -O1 -Wall -Wextra -Wno-unused-command-line-argument -Wshadow -Wnon-virtual-dtor -pedantic")
