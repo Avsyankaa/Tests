@@ -1,1 +1,1 @@
-[![Build Status](https://travis-ci.org/Avsyankaa/Json3.svg?branch=master)](https://travis-ci.org/Avsyankaa/Json3)
+[![Build Status](https://travis-ci.org/Avsyankaa/Task_1_and_2_with_tests.svg?branch=master)](https://travis-ci.org/Avsyankaa/Task_1_and_2_with_tests)
