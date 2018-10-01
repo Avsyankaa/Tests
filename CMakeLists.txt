@@ -10,7 +10,7 @@ set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++11 -fsanitize=address -O1 -Wall 
 
 # enum your files
 add_executable(executable
-    test.cpp
+    test.cpp lab05.cpp lab05.hpp
 )
 
 find_package (Threads)
