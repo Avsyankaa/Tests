@@ -1,7 +1,7 @@
 #include<vector>
 #include <string>
-#include "googletest/gtest.h"
-#include "lab05.cpp"
+#include <gtest/gtest.h>
+#include "lab05.hpp"
 
 TEST(Task1, Middle) {
     // базовый сценарий
