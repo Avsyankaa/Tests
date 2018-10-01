@@ -11,3 +11,6 @@ sum= sum/array.size();
 return sum;
 };
 
+int main() {
+    
+};
