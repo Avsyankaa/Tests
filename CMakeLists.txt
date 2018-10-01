@@ -13,4 +13,5 @@ add_executable(executable
     test.cpp
 )
 
-target_link_libraries(executable)
+find_package (Threads)
+target_link_libraries (executable -fsanitize=address gtest ${CMAKE_THREAD_LIBS_INIT})
