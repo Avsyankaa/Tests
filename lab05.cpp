@@ -1,6 +1,4 @@
-#include <iostream>
-#include <string>
-#include <vector>
+#include "lab05.hpp"
 float mean(const std::vector<float>& array) {
     float sum;
     if (array.size()==0) {
