@@ -48,7 +48,9 @@ TEST(Task3, Argmax) {
    index_max = argmax(v4);
    EXPECT_EQ(index_max, 0);   
     // пустой вектор
-  std::vector<float> v5 = {0};  
+  std::vector<float> v5 = {};  
   index_max = argmax(v5);
   EXPECT_EQ(index_max, -1);   
 }
+
+TEST(Task)
