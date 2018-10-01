@@ -11,8 +11,9 @@ sum= sum/array.size();
 return sum;
 };
 
-int main() {
+/*int main() {
   std::vector<float> v = {11, 2, 36, 47, 5, 53, 56};
   float result = mean(v);
   std::cout<< result<< std::endl;
 }
+*/
