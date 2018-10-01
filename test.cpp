@@ -1,39 +1,12 @@
-#include <any>
+#include<vector>
 #include <string>
+#include "googletest/gtest.h"
+#include "lab05.cpp"
 
-#include <gtest/gtest.h>
-#include "json.hpp"
-
-namespace {
-
-std::string json_data = R"(
-{
-    "lastname" : "Ivanov",
-    "firstname" : "Ivan",
-    "age" : 25,
-    "islegal" : false,
-    "marks" : [
-    	4,5,5,5,2,3
-    ],
-    "address" : {
-    	"city" : "Moscow",
-        "street" : "Vozdvijenka"
-    }
-})";
-
-TEST(Json, LoadFromString) {
-  Json object(json_data);
-  EXPECT_EQ(std::any_cast<std::string>(object["lastname"]), "Ivanov");
-  EXPECT_EQ(std::any_cast<bool>(object["islegal"]), false);
-  EXPECT_EQ(std::any_cast<double>(object["age"]), 25);
-
-  auto marks = std::any_cast<Json>(object["marks"]);
-  EXPECT_EQ(std::any_cast<double>(marks[0]), 4);
-  EXPECT_EQ(std::any_cast<double>(marks[1]), 5);
-
-  auto address = std::any_cast<Json>(object["address"]);
-  EXPECT_EQ(std::any_cast<std::string>(address["city"]), "Moscow");
-  EXPECT_EQ(std::any_cast<std::string>(address["street"]), "Vozdvijenka");
+TEST(Task1, Middle) {
+    // базовый сценарий
+  std::vector<float> v = {11, 2, 36, 47, 5, 53, 56};
+  float result = mean(v);
+  EXPECT_EQ(result, 30);
 }
 
-}  // namespace
