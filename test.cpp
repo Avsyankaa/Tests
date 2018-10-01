@@ -79,3 +79,26 @@ TEST(Task5, delete_first_minus) {
   EXPECT_EQ(result4, v4);  
   EXPECT_EQ(deleting_element, 0);   
 }
+
+TEST(Task7, split) {
+  // базовый случай   
+ std::string str1 = "Hello! Do you like programming?";
+ std::vector<std::string> result1 = {"Hello!", "Do", "you", "like", "programming?"};
+ std::vector<std::string> v1 = split(str1, char sep = ' ');
+ EXPECT_EQ(result1, v1);  
+   // строка не содержит пробелов
+ std::string str2 = "Hello!";  
+ std::vector<std::string> result2 = {"Hello!"};
+ std::vector<std::string> v2 = split(str2, char sep = ' '); 
+ EXPECT_EQ(result2, v2);
+    // строка пустая
+ std::string str3 = "";  
+ std::vector<std::string> result3 = {};
+ std::vector<std::string> v3 = split(str3, char sep = ' '); 
+ EXPECT_EQ(result3, v3);   
+    // строка состоит только из пробельного символа
+ std::string str4 = " ";
+ std::vector<std::string> result4 = {"", ""};
+ std::vector<std::string> v4 = split(str4, char sep = ' ');
+ EXPECT_EQ(result4, v4);    
+}
