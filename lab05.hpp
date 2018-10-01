@@ -1,4 +1,4 @@
 #include <iostream>
 #include <string>
 #include <vector>
-float mean(const std::vector<float>& array); 
+float mean(std::vector<float>& array); 
