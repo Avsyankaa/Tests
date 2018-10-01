@@ -48,9 +48,34 @@ TEST(Task3, Argmax) {
    index_max = argmax(v4);
    EXPECT_EQ(index_max, 0);   
     // пустой вектор
-  std::vector<float> v5 = {};  
-  index_max = argmax(v5);
+  std::vector<float> v6 = {};  
+  index_max = argmax(v6);
   EXPECT_EQ(index_max, -1);   
 }
 
-TEST(Task)
+TEST(Task5, delete_first_minus) {
+    // базовый сценарий
+  std::vector<float> v1 = {11, -2, 36, -47, 5, 53, 56};
+  std::vector<float> result1 = {11, 36, -47, 5, 53, 56};
+  float deleting_element = delete_first_minus(v1);
+  EXPECT_EQ(result1, v1);
+  EXPECT_EQ(deleting_element, -2);
+    // только неотрицательные элементы
+  std::vector<float> v2 = {11, 2, 0, 47, 5, 53, 56};
+  std::vector<float> result2 = {11, 2, 0, 47, 5, 53, 56};
+  deleting_element = delete_first_minus(v2);
+  EXPECT_EQ(result2, v2);  
+  EXPECT_EQ(deleting_element, 0);  
+    // один отрицательный элемент
+  std::vector<float> v3 = {-111};
+  std::vector<float> result3 = {};
+  deleting_element = delete_first_minus(v3);
+  EXPECT_EQ(result3, v3);  
+  EXPECT_EQ(deleting_element, -111); 
+    // пустой массив 
+  std::vector<float> v4 = {};
+  std::vector<float> result4 = {};
+  deleting_element = delete_first_minus(v4);
+  EXPECT_EQ(result4, v4);  
+  EXPECT_EQ(deleting_element, 0);   
+}
