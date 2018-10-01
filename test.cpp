@@ -39,6 +39,10 @@ TEST(Task3, Argmax) {
   std::vector<float> v3 = {5, -3, -5, 47, -40, 3, 0}; 
   index_max = argmax(v3);
   EXPECT_EQ(index_max, 3);  
+    // вектор из одинаковых элементов 
+   std::vector<float> v5 = {5, 5, 5, 5, 5, 5, 5}; 
+  index_max = argmax(v5);
+  EXPECT_EQ(index_max, 0); 
     // вектор из одного элемента
    std::vector<float> v4 = {456};  
    index_max = argmax(v4);
